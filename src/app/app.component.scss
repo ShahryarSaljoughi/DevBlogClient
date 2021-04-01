@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+
+.heading {
+    //min-height: 200px;
+    max-width: 200 px;
+    margin: 0;
+    .wrapper {
+        height: 10vh;
+        /*This part is important for centering*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .typing-demo {
+            width: 17ch;
+            animation: typing 3s steps(22), blink .5s step-end infinite alternate;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid;
+            font-family: monospace;
+            font-size: 3vw;
+          }
+          @keyframes typing {
+            from {
+              width: 0
+            }
+          }
+              
+          @keyframes blink {
+            50% {
+              border-color: transparent
+            }
+          }
+    }
+    .short-intro {
+        text-align: center;
+    }
+}  
+  
+.main-container {
+    display: flex;
+    min-width: 900px;
+    max-width: 90%;
+    margin: auto;
+    
+    .middle-container {
+        align-items: flex-start;
+        flex: 2;
+    }
+    .right-sidebar {
+        max-width: 250px;
+        flex: 1;
+    }
+    .left-sidebar {
+        max-width: 250px;
+        flex: 1;
+    }
+}
+
+
+
+
+
+
+  @media only screen and (max-width: 600px) {
+    .heading {
+        .wrapper {
+            .typing-demo {
+                font-size: 20px;
+            }
+        }
+    }  
+    
+  }

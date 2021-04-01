@@ -1,0 +1,13 @@
+kind: ExternalService
+name: sm-frontend
+spec:
+  allow_http: false
+  domains:
+    - name: shahryarslg.ir
+  image: 'sm-frontend:v0.10'
+  image_pull_policy: IfNotPresent
+  path: /
+  port: 80
+  replicas: 1
+  resources:
+    memory: 200Mi
